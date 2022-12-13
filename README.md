@@ -27,9 +27,11 @@ Features
 
 API Reference
 
-The app connects to a GraphQL API (repo)[https://github.com/HelixHEX/exposure-server] for performing operations such as querying and mutating data. As of now the endpoint is hardcoded to the public api hosted on AWS. If you would like to change the endpoint, you can do so in this [file](./graphql/fetcher.ts)
+The app connects to a GraphQL API [(*repo*)](https://github.com/HelixHEX/exposure-server) for performing operations such as querying and mutating data. As of now the endpoint is hardcoded to the public api hosted on AWS. If you would like to change the endpoint, you can do so in this [*file*](./graphql/fetcher.ts)
 
 Here are some examples of the types of operations that can be performed using the API:
+
+[*Full list of queries and mutations*](./graphql/schema.gql)
 
 ## Querying data
 
