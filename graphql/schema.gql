@@ -1,0 +1,102 @@
+query Posts {
+  posts {
+    id
+    createdAt
+    description
+    image_url
+    profile {
+      id
+      username
+    }
+    likes {
+      id
+      profile_id
+    }
+  }
+}
+
+query Post($id: Int!) {
+  post(id: $id) {
+    description
+    image_url
+    profile_id
+  }
+}
+
+query CurrentUser {
+  currentUser {
+    id
+    email
+    profile {
+      id
+      name
+      bio
+      username
+      private
+    }
+  }
+}
+
+query Comments($postId: Int!) {
+  comments(post_id: $postId) {
+    id
+    comment
+    createdAt
+    profile {
+      id
+      username
+    }
+  }
+}
+
+query Profile($username: String!, $me: Boolean) {
+  profile(username: $username, me: $me) {
+    id
+    name
+    username
+    bio
+    post {
+      id
+      image_url
+    }
+  }
+}
+
+mutation Login($email: String!, $password: String!) {
+  login(email: $email, password: $password) {
+    token
+  }
+}
+
+mutation CreatePost($description: String!, $image_url: String!) {
+  createPost(description: $description, image_url: $image_url) {
+    id
+    profile_id
+    description
+    image_url
+  }
+}
+
+mutation LikePost($postId: Int!) {
+  likePost(post_id: $postId) {
+    like {
+      id
+    }
+  }
+}
+
+mutation UnlikePost($postId: Int!, $likeId: Int!) {
+  unlikePost(post_id: $postId, like_id: $likeId) {
+    post {
+      id
+    }
+  }
+}
+
+mutation CreateComment($comment: String!, $postId: Int!) {
+  createComment(comment: $comment, post_id: $postId) {
+    comment {
+      comment
+    }
+  }
+}
