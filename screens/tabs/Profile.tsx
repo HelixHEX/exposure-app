@@ -104,7 +104,7 @@ const Profile = () => {
 const styles = StyleSheet.create({
   container: {
     backgroundColor: "#8364E8",
-    height: 300,
+    height: 350,
     width: "100%",
     paddingTop: 60,
   },

@@ -9,8 +9,12 @@ Requirements
 
 # Getting Started
 
-Install the required dependencies by running
+Clone this repo 
+```bash
+git clone https://github.com/HelixHEX/exposure-app
+```
 
+Install the required dependencies by running
 ```bash
 yarn install
 ```

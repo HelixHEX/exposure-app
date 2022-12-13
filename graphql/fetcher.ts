@@ -5,10 +5,10 @@ export const fetcher = <TData, TVariables>(
   variables?: TVariables
 ) => {
   return async (): Promise<TData> => {
-    const res = await fetch("http://192.168.1.39:4000/graphql", {
+    const res = await fetch("https://api.exposure.eliaswambugu.com/graphql", {
       method: "POST",
       headers: {
-        'Authorization': `${await getToken()}`,
+        Authorization: `${await getToken()}`,
         "Content-Type": "application/json",
       },
       body: JSON.stringify({ query, variables }),
