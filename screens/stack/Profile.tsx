@@ -93,7 +93,7 @@ const Profile = () => {
 const styles = StyleSheet.create({
   container: {
     backgroundColor: "#8364E8",
-    height: 300,
+    height: 350,
     width: "100%",
     paddingTop: 60,
   },
@@ -137,7 +137,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#F9F9F9",
     width: "100%",
     height: "100%",
-    marginTop: -20,
+    marginTop: -30,
     borderTopLeftRadius: 30,
     borderTopRightRadius: 30,
     padding: 20,
